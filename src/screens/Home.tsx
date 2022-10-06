@@ -10,6 +10,10 @@ const Home = ({navigation}) => {
         <Button title="Submit" onPress={()=>{
             navigation.navigate('AstroidData',{Astroidid:astroidid})
         }}/>
+        <View style={styles.border}/>
+        <Button title="Random astroid" onPress={()=>{
+            navigation.navigate('AstroidData',{Astroidid:"random"})
+        }}/>
       </View>
     </SafeAreaView>
   );
@@ -18,6 +22,7 @@ const Home = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     marginVertical: 30,
+    marginTop:150,
     padding:30,
     flexDirection:"column",
     alignItems:"center",
@@ -27,6 +32,11 @@ const styles = StyleSheet.create({
     width:200,
     fontSize:18,
     marginBottom:10
+  },
+  border:{
+    height:10,
+    margin:20,
+    padding:20,
   }
 });
 
